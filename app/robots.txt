@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Allow: /
+
+Sitemap: https://wiregency.com/sitemap.xml
