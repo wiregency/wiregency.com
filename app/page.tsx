@@ -1,4 +1,10 @@
-import { ArrowRight, Twitter, MessageCircle, Scale, FileText } from "lucide-react";
+import {
+  ArrowRight,
+  Twitter,
+  MessageCircle,
+  Scale,
+  FileText,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -7,20 +13,21 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center">
           wiregency
         </h1>
-        
+
         <p className="text-zinc-400 text-center text-base sm:text-lg max-w-[280px] sm:max-w-xl px-1">
-          Développement web & design sur mesure pour les startups et les entreprises. Site web en construction 🚧
+          Développement web & design sur mesure pour les startups et les
+          entreprises. Site web en construction 🚧
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-lg">
           <a
-            href="https://discord.gg/wiregency"
+            href="https://discord.wiregency.com"
             className="group flex-1 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-2.5 sm:py-3 px-4 sm:px-6 text-center font-medium flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <span>Demander un devis</span>
             <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
           </a>
-          
+
           <a
             href="https://twitter.com/wiregency"
             target="_blank"
@@ -34,7 +41,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs sm:text-sm text-zinc-400 mt-4 sm:mt-8">
-          <a 
+          <a
             href="https://discord.gg/wiregency"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,7 +51,7 @@ export default function Home() {
             <span>Contact</span>
           </a>
 
-          <button 
+          <button
             disabled
             className="flex items-center gap-2 opacity-50 cursor-not-allowed"
           >
@@ -52,7 +59,7 @@ export default function Home() {
             <span>Mentions légales</span>
           </button>
 
-          <button 
+          <button
             disabled
             className="flex items-center gap-2 opacity-50 cursor-not-allowed"
           >

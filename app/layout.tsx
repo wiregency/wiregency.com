@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import PromotionalBanner from "@/components/Banner";
-
-// Pour une police plus moderne, je suggère d'utiliser Inter
+import Banner from "@/components/Banner";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -11,7 +9,6 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Si vous voulez garder Geist Mono pour le code
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -33,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <PromotionalBanner />
+        <Banner />
         {children}
       </body>
     </html>
