@@ -8,7 +8,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen text-white flex items-center justify-center p-4 sm:p-6 md:p-8">
       <main className="w-full max-w-4xl rounded-md p-6 sm:p-8 md:p-12 flex flex-col items-center gap-6 sm:gap-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center">
           wiregency
@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs sm:text-sm text-zinc-400 mt-4 sm:mt-8">
           <a
-            href="https://discord.gg/wiregency"
+            href="https://discord.wiregency.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-zinc-300 transition-colors"
