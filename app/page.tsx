@@ -1,19 +1,13 @@
-import {
-  ArrowRight,
-  Twitter,
-  MessageCircle,
-  Scale,
-  FileText,
-} from "lucide-react";
 import { creations } from "@/config/creations";
 import CreationCard from "@/components/CreationCard";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
         {/* Hero Section */}
-        <div className="container mx-auto px-4 min-h-[90vh] md:h-screen flex items-center justify-center py-20 md:py-0">
+        <div className="container mx-auto px-4 min-h-[90vh] md:h-screen flex items-center justify-center py-20 md:py-0 relative">
           <div className="max-w-3xl text-center space-y-6 md:space-y-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
               wiregency
@@ -33,10 +27,18 @@ export default function Home() {
               </a>
             </div>
           </div>
+          
+          <a
+            href="#creations"
+            className="absolute bottom-32 left-1/2 -translate-x-1/2 text-zinc-400 hover:text-white transition-colors animate-bounce"
+            aria-label="Scroll to creations"
+          >
+            <ArrowDown className="w-6 h-6" />
+          </a>
         </div>
 
         {/* Creations Section */}
-        <div className="container mx-auto px-4 py-16 md:py-24">
+        <div id="creations" className="scroll-mt-8 container mx-auto px-4 py-16 md:py-24">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
             Nos créations
           </h2>
@@ -60,7 +62,7 @@ export default function Home() {
               </p>
               <a
                 href="https://discord.wiregency.com"
-                className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
+                className="group inline-flex items-center gap-2 bg-blue-400 text-black hover:bg-blue-500 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
               >
                 <span>Rejoindre le discord</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
