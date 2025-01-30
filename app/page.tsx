@@ -5,69 +5,70 @@ import {
   Scale,
   FileText,
 } from "lucide-react";
+import { creations } from "@/config/creations";
+import CreationCard from "@/components/CreationCard";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-white flex items-center justify-center p-4 sm:p-6 md:p-8">
-      <main className="w-full max-w-4xl rounded-md p-6 sm:p-8 md:p-12 flex flex-col items-center gap-6 sm:gap-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-center">
-          wiregency
-        </h1>
+    <>
+      <div className="min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 min-h-[90vh] md:h-screen flex items-center justify-center py-20 md:py-0">
+          <div className="max-w-3xl text-center space-y-6 md:space-y-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+              wiregency
+            </h1>
+            
+            <p className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-xl mx-auto px-4 sm:px-0">
+              Développement web & design sur mesure haut de gamme.
+            </p>
 
-        <p className="text-zinc-400 text-center text-base sm:text-lg max-w-[280px] sm:max-w-xl px-1">
-          Développement web & design sur mesure pour les startups et les
-          entreprises. Site web en construction 🚧
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-lg">
-          <a
-            href="https://discord.wiregency.com"
-            className="group flex-1 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-2.5 sm:py-3 px-4 sm:px-6 text-center font-medium flex items-center justify-center gap-2 text-sm sm:text-base"
-          >
-            <span>Demander un devis</span>
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
-          </a>
-
-          <a
-            href="https://twitter.com/wiregency"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex-1 border border-white/20 hover:bg-white/10 transition-all rounded-full py-2.5 sm:py-3 px-4 sm:px-6 text-center font-medium flex items-center justify-center gap-2 text-sm sm:text-base"
-          >
-            <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Suivre sur Twitter</span>
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
-          </a>
+            <div className="pt-2 md:pt-4">
+              <a
+                href="https://discord.wiregency.com"
+                className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-3 md:py-4 px-6 md:px-8 font-medium text-base md:text-lg"
+              >
+                <span>Demander un devis</span>
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs sm:text-sm text-zinc-400 mt-4 sm:mt-8">
-          <a
-            href="https://discord.wiregency.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-zinc-300 transition-colors"
-          >
-            <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Contact</span>
-          </a>
-
-          <button
-            disabled
-            className="flex items-center gap-2 opacity-50 cursor-not-allowed"
-          >
-            <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Mentions légales</span>
-          </button>
-
-          <button
-            disabled
-            className="flex items-center gap-2 opacity-50 cursor-not-allowed"
-          >
-            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>CGV</span>
-          </button>
+        {/* Creations Section */}
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
+            Nos créations
+          </h2>
+          
+          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {creations.map((creation, index) => (
+              <CreationCard key={index} creation={creation} />
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* CTA Section */}
+        <div className="container mx-auto px-4 py-12 md:pb-24">
+          <div className="max-w-5xl mx-auto bg-zinc-900/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12">
+            <div className="max-w-2xl">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">
+                Intéressé ?
+              </h2>
+              <p className="text-zinc-400 text-sm sm:text-base mb-6 sm:mb-8">
+                Contactez-nous dès maintenant pour discuter de votre projet en détail. Notre équipe vous accompagnera dans la réalisation de votre vision et vous fournira un devis gratuit, adapté à vos besoins.
+              </p>
+              <a
+                href="https://discord.wiregency.com"
+                className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
+              >
+                <span>Rejoindre le discord</span>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
