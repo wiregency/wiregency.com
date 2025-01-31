@@ -20,6 +20,8 @@ export default function Home() {
             <div className="pt-2 md:pt-4">
               <a
                 href="https://discord.wiregency.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-3 md:py-4 px-6 md:px-8 font-medium text-base md:text-lg"
               >
                 <span>Demander un devis</span>
@@ -62,6 +64,8 @@ export default function Home() {
               </p>
               <a
                 href="https://discord.wiregency.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 bg-blue-400 text-black hover:bg-blue-500 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
               >
                 <span>Rejoindre le discord</span>
