@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import Markdown from 'markdown-to-jsx';
+import ReactMarkdown from 'react-markdown';
 
 export default function Legal() {
-  // Read markdown file
   const markdownContent = fs.readFileSync(
     path.join(process.cwd(), 'content/legal.md'),
     'utf-8'
@@ -14,7 +13,7 @@ export default function Legal() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
           <article className="prose prose-invert prose-headings:text-white prose-a:text-blue-400 max-w-none">
-            <Markdown>{markdownContent}</Markdown>
+            <ReactMarkdown>{markdownContent}</ReactMarkdown>
           </article>
         </div>
       </div>
