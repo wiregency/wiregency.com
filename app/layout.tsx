@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 export default function RootLayout({
   children,
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <GoogleAnalytics />
         <Banner />
         <Navbar />
         {children}
