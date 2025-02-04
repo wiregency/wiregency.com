@@ -20,6 +20,28 @@ export const creations: Creation[] = [
       color: "yellow",
     },
     backgroundColor: "yellow",
-    url: "https://azuriom.com/" // Optional
+    url: "https://sunerya.fr" // Optional
   },
+  {
+    title: "Vintarget",
+    description: "Page d'opt in pour une solution SaaS réalisée avec NextJS, TailwindCSS, Resend.",
+    image: "/images/vintarget.png",
+    tag: {
+      text: "Landing Page",
+      color: "green",
+    },
+    backgroundColor: "green",
+    url: "https://vintarget.fr"
+  },
+  {
+    title: "PhoneRepair44",
+    description: "Landing page réalisée pour PhoneRepair44 avec NextJS, TailwindCSS, Supabase.",
+    image: "/images/phonerepair44.png",
+    tag: {
+      text: "Landing Page",
+      color: "blue",
+    },
+    backgroundColor: "blue",
+    url: "https://phonerepair44.fr"
+  }
 ];
