@@ -1,5 +1,3 @@
-import { Icons } from "./ui/Icons";
-
 const technologies = [
   { name: "TypeScript", icon: "typescript" },
   { name: "HTML", icon: "html" },
