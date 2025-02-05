@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 sm:space-y-4">
       {faqItems.map((faq, index) => (
         <div
           key={index}
@@ -20,11 +20,11 @@ export default function FAQ() {
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full p-6 flex items-center justify-between text-left"
+            className="w-full p-4 sm:p-6 flex items-center justify-between text-left"
           >
-            <h3 className="text-lg font-semibold">{faq.question}</h3>
+            <h3 className="text-base sm:text-lg font-semibold pr-4">{faq.question}</h3>
             <ChevronDown
-              className={`w-5 h-5 transform transition-transform duration-200 ${
+              className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 transform transition-transform duration-200 ${
                 openIndex === index ? 'rotate-180' : ''
               }`}
             />
@@ -32,11 +32,11 @@ export default function FAQ() {
           <div
             className={`transition-all duration-200 ${
               openIndex === index
-                ? 'max-h-48 opacity-100'
+                ? 'max-h-[500px] opacity-100'
                 : 'max-h-0 opacity-0'
             }`}
           >
-            <p className="px-6 pb-6 text-zinc-400">{faq.answer}</p>
+            <p className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-zinc-400">{faq.answer}</p>
           </div>
         </div>
       ))}
