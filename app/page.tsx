@@ -1,6 +1,9 @@
 import { creations } from "@/config/creations";
 import CreationCard from "@/components/CreationCard";
 import { ArrowDown, ArrowRight } from "lucide-react";
+import FAQ from "@/components/FAQ";
+import Spline from '@splinetool/react-spline/next';
+import TechnologiesSection from "@/components/Technologies";
 
 export default function Home() {
   return (
@@ -49,6 +52,22 @@ export default function Home() {
             {creations.map((creation, index) => (
               <CreationCard key={index} creation={creation} />
             ))}
+          </div>
+        </div>
+
+        
+        {/* FAQ Section */}
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                Foire aux questions
+              </h2>
+              <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto">
+                Retrouvez les réponses aux questions les plus courantes sur nos services.
+              </p>
+            </div>
+            <FAQ />
           </div>
         </div>
 
