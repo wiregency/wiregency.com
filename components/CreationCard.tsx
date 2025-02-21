@@ -56,7 +56,7 @@ export default function CreationCard({ creation, isProject = false }: CreationCa
         {isProject && (
           <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
             <span className="flex items-center gap-2 text-white font-medium">
-              Voir le projet <ArrowRight className="w-4 h-4 rotate-[-45deg]" />
+              View project <ArrowRight className="w-4 h-4 rotate-[-45deg]" />
             </span>
           </div>
         )}
