@@ -5,15 +5,15 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    question: "Comment se déroule un projet ?",
-    answer: "Nous commençons par un échange détaillé sur Discord pour comprendre vos besoins. Ensuite, nous établissons un devis gratuit avant de démarrer le développement."
+    question: "How does a project work?",
+    answer: "We start with a detailed discussion on Discord to understand your needs. Then, we provide a free quote before starting development."
   },
   {
-    question: "Quels sont vos délais de réalisation ?",
-    answer: "La réalisation de vos projets dépendent de la complexité de celui-ci et de nos disponibilités, n'hésitez pas à rejoindre le discord pour demander un devis."
+    question: "What are your delivery times?",
+    answer: "Project completion times depend on its complexity and our availability. Feel free to join our Discord to request a quote."
   },
   {
-    question: "Quelles technologies utilisez-vous ?",
-    answer: "Nous utilisons principalement React, Next.js, TypeScript, TailwindCSS et Adonis pour garantir des applications modernes, performantes et facilement maintenables."
+    question: "What technologies do you use?",
+    answer: "We primarily use React, Next.js, TypeScript, TailwindCSS, and Adonis to ensure modern, performant, and maintainable applications."
   }
 ];

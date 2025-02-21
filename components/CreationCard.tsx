@@ -1,13 +1,27 @@
 'use client';
 
 import { ArrowRight } from "lucide-react";
-import { Creation } from "@/config/creations";
+import { Creation } from "@/config/projects";
+import { useRouter } from "next/navigation";
 
 interface CreationCardProps {
   creation: Creation;
+  isProject?: boolean;
 }
 
-export default function CreationCard({ creation }: CreationCardProps) {
+export default function CreationCard({ creation, isProject = false }: CreationCardProps) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (isProject) {
+      // Navigate to project page using the title as slug
+      router.push(`/projects/${creation.title.toLowerCase().replace(/\s+/g, '-')}`);
+    } else if (creation.url) {
+      // Open external URL in new tab
+      window.open(creation.url, '_blank');
+    }
+  };
+
   const getTagColorClasses = (color: string) => {
     return {
       yellow: 'bg-yellow-500/20 text-yellow-300',
@@ -30,8 +44,8 @@ export default function CreationCard({ creation }: CreationCardProps) {
 
   return (
     <div
-      onClick={() => creation.url && window.open(creation.url, '_blank')}
-      className={`group bg-zinc-900/50 rounded-lg overflow-hidden ${creation.url ? 'cursor-pointer' : ''} transition-all duration-300 hover:scale-105`}
+      onClick={handleClick}
+      className={`group bg-zinc-900/50 rounded-lg overflow-hidden ${(creation.url || isProject) ? 'cursor-pointer' : ''} transition-all duration-300 hover:scale-105`}
     >
       <div className={`relative aspect-[4/3] ${getBackgroundColor(creation.backgroundColor)} overflow-hidden`}>
         <img

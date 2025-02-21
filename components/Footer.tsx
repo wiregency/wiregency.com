@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-6 sm:py-8">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <div className="text-zinc-400 text-xs sm:text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Wiregency. Tous droits réservés.
+            © {new Date().getFullYear()} Wiregency. All rights reserved.
           </div>
           <div className="flex items-center gap-4 sm:gap-6">
             <Link 
@@ -20,7 +20,7 @@ export default function Footer() {
               href="/legal"
               className="text-zinc-400 hover:text-white transition-colors text-xs sm:text-sm"
             >
-              Mentions légales
+              Legal notice
             </Link>
           </div>
         </div>
