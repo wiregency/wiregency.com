@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Wiregency",
-  description: "Développement & design d'applications web sur mesure.",
+  description: "We design solutions tailored to your needs, from web applications to web design.",
 };
 
 import Footer from "@/components/Footer";

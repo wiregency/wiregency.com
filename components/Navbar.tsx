@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +29,17 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4 absolute left-1/2 -translate-x-1/2">
+            <Link href="/" className="relative overflow-hidden group">
+              <div className={`${pathname === '/' ? 'text-white' : 'text-zinc-400'} group-hover:-translate-y-full transition-transform duration-300`}>
+                Home
+              </div>
+              <div className="text-white absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300">
+                Home
+              </div>
+            </Link>
+            <div className="h-4 w-[1px] bg-zinc-700"></div>
             <Link href="/projects" className="relative overflow-hidden group">
-              <div className="text-zinc-400 group-hover:-translate-y-full transition-transform duration-300">
+              <div className={`${pathname.startsWith('/projects') ? 'text-white' : 'text-zinc-400'} group-hover:-translate-y-full transition-transform duration-300`}>
                 Projects
               </div>
               <div className="text-white absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300">
@@ -75,6 +86,18 @@ export default function Navbar() {
           }`}>
           <div className="flex flex-col gap-4 p-4">
             <Link 
+              href="/" 
+              className="relative overflow-hidden group"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div className="text-zinc-400 group-hover:-translate-y-full transition-transform duration-300">
+                Home
+              </div>
+              <div className="text-white absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300">
+                Home
+              </div>
+            </Link>
+            <Link 
               href="/projects" 
               className="relative overflow-hidden group"
               onClick={() => setIsMenuOpen(false)}
@@ -86,7 +109,6 @@ export default function Navbar() {
                 Projects
               </div>
             </Link>
-            <div className="h-4 w-[1px] bg-zinc-700"></div>
             <Link href="/#" className="relative overflow-hidden group">
               <div className="text-zinc-400 group-hover:-translate-y-full transition-transform duration-300">
                 Pricing
