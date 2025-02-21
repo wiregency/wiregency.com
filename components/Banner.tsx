@@ -1,4 +1,3 @@
-// components/Banner.tsx
 import React from "react";
 import Link from "next/link";
 
@@ -12,8 +11,7 @@ const Banner = () => {
             📦
           </span>
           <p className="text-black text-md font-medium">
-            Besoin d&apos;un site internet? Devis sur-mesure, prise en charge
-            rapide, offres compétitives via notre serveur Discord
+            Need a website? Get a custom quote, fast response, and competitive offers through our Discord server
           </p>
           <span role="img" aria-label="package" className="text-base">
             📦
@@ -29,8 +27,7 @@ const Banner = () => {
                   📦
                 </span>
                 <p className="text-black text-md font-medium">
-                  Besoin d&apos;un site internet? Devis sur-mesure, prise en
-                  charge rapide, offres compétitives via notre serveur Discord
+                  Need a website? Get a custom quote, fast response, and competitive offers through our Discord server
                 </p>
                 <span role="img" aria-label="package" className="text-base">
                   📦
