@@ -3,6 +3,7 @@ import path from 'path';
 import { notFound } from 'next/navigation';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 import { projects } from '@/config/projects';
 import ProjectContent from './ProjectContent';
@@ -35,6 +36,7 @@ export default async function ProjectPage({ params }: Props) {
 
   const result = await unified()
     .use(remarkParse)
+    .use(remarkGfm)  // Add this line
     .use(remarkHtml)
     .process(markdownContent);
 
