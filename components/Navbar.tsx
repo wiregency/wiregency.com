@@ -47,8 +47,8 @@ export default function Navbar() {
               </div>
             </Link>
             <div className="h-4 w-[1px] bg-zinc-700"></div>
-            <Link href="/#" className="relative overflow-hidden group">
-              <div className="text-zinc-400 group-hover:-translate-y-full transition-transform duration-300">
+            <Link href="/pricing" className="relative overflow-hidden group">
+              <div className={`${pathname === '/pricing' ? 'text-white' : 'text-zinc-400'} group-hover:-translate-y-full transition-transform duration-300`}>
                 Pricing
               </div>
               <div className="text-white absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300">
@@ -109,8 +109,8 @@ export default function Navbar() {
                 Projects
               </div>
             </Link>
-            <Link href="/#" className="relative overflow-hidden group">
-              <div className="text-zinc-400 group-hover:-translate-y-full transition-transform duration-300">
+            <Link href="/pricing" className="relative overflow-hidden group">
+              <div className={`${pathname === '/pricing' ? 'text-white' : 'text-zinc-400'} group-hover:-translate-y-full transition-transform duration-300`}>
                 Pricing
               </div>
               <div className="text-white absolute top-full left-0 group-hover:-translate-y-full transition-transform duration-300">
