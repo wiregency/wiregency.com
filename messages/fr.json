@@ -1,0 +1,99 @@
+{
+  "Home": {
+    "title": "Vos idées n'ont pas de limites.",
+    "description": "Nous concevons des solutions adaptées à vos besoins, des applications web au web design, vos projets sont entre de bonnes mains.",
+    "cta": "Demander un devis"
+  },
+  "Projects": {
+    "title": "Dernières réalisations",
+    "viewAll": "Voir tous les projets",
+    "viewProject": "Voir le projet",
+    "description": "Chacun de nos projets reflète notre engagement envers l'excellence, conçus pour inspirer et promouvoir le succès."
+  },
+  "CTA": {
+    "title": "Intéressé ?",
+    "description": "Contactez-nous maintenant pour discuter de votre projet en détail. Notre équipe vous aidera à donner vie à votre vision et vous fournira un devis gratuit adapté à vos besoins.",
+    "button": "Rejoindre Discord"
+  },
+  "FAQ": {
+    "title": "Questions Fréquentes",
+    "description": "Trouvez les réponses aux questions les plus courantes sur nos services.",
+    "items": {
+      "project": {
+        "question": "Comment fonctionne un projet ?",
+        "answer": "Nous commençons par une discussion détaillée sur Discord pour comprendre vos besoins. Ensuite, nous fournissons un devis gratuit avant de commencer le développement."
+      },
+      "delivery": {
+        "question": "Quels sont vos délais de livraison ?",
+        "answer": "Les délais de réalisation dépendent de la complexité du projet et de notre disponibilité. N'hésitez pas à nous rejoindre sur Discord pour demander un devis."
+      },
+      "tech": {
+        "question": "Quelles technologies utilisez-vous ?",
+        "answer": "Nous utilisons principalement React, Next.js, TypeScript, TailwindCSS et Adonis pour garantir des applications modernes, performantes et maintenables."
+      }
+    }
+  },
+  "Footer": {
+    "rights": "Tous droits réservés.",
+    "discord": "Discord",
+    "legal": "Mentions légales"
+  },
+  "Banner": {
+    "text": "Besoin d'un site web ? Obtenez un devis personnalisé, une réponse rapide et des offres compétitives via notre serveur Discord"
+  },
+  "Nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "pricing": "Tarifs",
+    "cta": "Demander un devis"
+  },
+  "NotFound": {
+    "title": "404",
+    "description": "Page non trouvée",
+    "action": "Retourner à l'accueil"
+  },
+  "Pricing": {
+    "title": "Nos services",
+    "subtitle": "De thèmes Azuriom à des solutions sur-mesure",
+    "startingAt": "À partir de",
+    "currency": "EUR",
+    "getStarted": "Commencer",
+    "startDiscussion": "Démarrer la discussion",
+    "customDesign": "Service de web design custom",
+    "plans": {
+      "theme": {
+        "name": "Thème Azuriom",
+        "description": "Thème premium pour votre CMS Azuriom",
+        "features": {
+          "responsive": "Design responsive",
+          "plugins": "Compatible avec les plugins Azuriom",
+          "updates": "Mises à jour avec les versions d'Azuriom",
+          "support": "4 mois de support",
+          "installation": "Service d'installation"
+        }
+      },
+      "custom": {
+        "name": "Solution personnalisée",
+        "description": "Développement web sur mesure pour votre entreprise",
+        "included": {
+          "title": "Ce qui est inclus :",
+          "subtitle": "Chaque projet est unique et comprend :",
+          "items": [
+            "Consultation personnalisée",
+            "Design et développement sur mesure",
+            "Mises à jour régulières",
+            "Support technique"
+          ]
+        },
+        "process": {
+          "title": "Comment ça marche :",
+          "steps": [
+            "Consultation initiale pour comprendre vos besoins",
+            "Proposition détaillée et devis",
+            "Développement et mises à jour régulières"
+          ]
+        }
+      }
+    }
+  }
+}

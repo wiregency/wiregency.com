@@ -11,6 +11,7 @@ import ProjectContent from './ProjectContent';
 interface Props {
   params: Promise<{
     slug: string;
+    locale: string;
   }>;
 }
 
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   
   const project = projects.find((p) => p.slug === slug);
   
@@ -29,18 +30,23 @@ export default async function ProjectPage({ params }: Props) {
     notFound();
   }
 
-  const markdownContent = fs.readFileSync(
-    path.join(process.cwd(), `content/projects/${slug}.md`),
-    'utf-8'
-  );
+  try {
+    const markdownContent = fs.readFileSync(
+      path.join(process.cwd(), `content/projects/${locale}/${slug}.md`),
+      'utf-8'
+    );
 
-  const result = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)  // Add this line
-    .use(remarkHtml)
-    .process(markdownContent);
+    const result = await unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkHtml)
+      .process(markdownContent);
 
-  const contentHtml = result.toString();
+    const contentHtml = result.toString();
 
-  return <ProjectContent project={project} contentHtml={contentHtml} />;
+    return <ProjectContent project={project} contentHtml={contentHtml} />;
+  } catch (error) {
+    console.error(`Error loading project content: ${error}`);
+    notFound();
+  }
 }

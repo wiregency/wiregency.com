@@ -1,5 +1,7 @@
 'use client'
 
+import { useTranslations } from 'next-intl';
+
 import CreationCard from "@/components/CreationCard";
 import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import FAQ from "@/components/FAQ";
@@ -7,8 +9,10 @@ import { motion, useInView } from "framer-motion";
 import { projects } from "@/config/projects";
 import { useRef } from "react";
 import Link from "next/link";
+import BackgroundOrbs from "@/components/BackgroundOrbs";
 
 export default function Home() {
+  const t = useTranslations();
   const creationsRef = useRef(null);
   const faqRef = useRef(null);
   const ctaRef = useRef(null);
@@ -24,14 +28,15 @@ export default function Home() {
       <div className="min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
         {/* Hero Section */}
         <div className="container mx-auto px-4 min-h-[90vh] md:h-screen flex items-center justify-center py-20 md:py-0 relative">
-          <div className="max-w-3xl text-center space-y-6 md:space-y-8">
+          <BackgroundOrbs />
+          <div className="max-w-3xl text-center space-y-6 md:space-y-8 relative">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent"
             >
-              Your ideas have no limits.
+              {t('Home.title')}
             </motion.h1>
             
             <motion.p 
@@ -40,21 +45,21 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-xl mx-auto px-4 sm:px-0"
             >
-              We design solutions tailored to your needs, from web applications to web design, your projects are in good hands.
+              {t('Home.description')}
             </motion.p>
 
             <motion.div 
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="pt-2 md:pt-4">
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pt-2 md:pt-4">
               <a
                 href="https://discord.wiregency.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-3 md:py-4 px-6 md:px-8 font-medium text-base md:text-lg"
               >
-                <span>Request a quote</span>
+                <span>{t('Home.cta')}</span>
                 <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 transform transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
             </motion.div>
@@ -80,7 +85,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           >
-            Latest Work
+            {t('Projects.title')}
           </motion.h2>
           
           <motion.div 
@@ -114,7 +119,7 @@ export default function Home() {
               href="/projects"
               className="group inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
             >
-              <span>View all projects</span>
+              <span>{t('Projects.viewAll')}</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
             </Link>
           </motion.div>
@@ -135,7 +140,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
               >
-                Frequently Asked Questions
+                {t('FAQ.title')}
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -143,7 +148,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto"
               >
-                Find answers to the most common questions about our services.
+                {t('FAQ.description')}
               </motion.p>
             </motion.div>
             <motion.div
@@ -171,7 +176,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4"
               >
-                Interested?
+                {t('CTA.title')}
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -179,7 +184,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-zinc-400 text-sm sm:text-base mb-6 sm:mb-8"
               >
-                Contact us now to discuss your project in detail. Our team will help you bring your vision to life and provide you with a free quote tailored to your needs.
+                {t('CTA.description')}
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -192,7 +197,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 bg-blue-400 text-black hover:bg-blue-500 transition-all rounded-full py-2.5 sm:py-3 px-5 sm:px-6 text-sm sm:text-base font-medium"
                 >
-                  <span>Join Discord</span>
+                  <span>{t('CTA.button')}</span>
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
                 </a>
               </motion.div>

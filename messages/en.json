@@ -1,0 +1,99 @@
+{
+  "Home": {
+    "title": "Your ideas have no limits.",
+    "description": "We design solutions tailored to your needs, from web applications to web design, your projects are in good hands.",
+    "cta": "Request a quote"
+  },
+  "Projects": {
+    "title": "Latest Work",
+    "viewAll": "View all projects",
+    "viewProject": "View project",
+    "description": "Each initiative we create is a reflection of our commitment to excellence, designed to inspire and promote success."
+  },
+  "CTA": {
+    "title": "Interested?",
+    "description": "Contact us now to discuss your project in detail. Our team will help you bring your vision to life and provide you with a free quote tailored to your needs.",
+    "button": "Join Discord"
+  },
+  "FAQ": {
+    "title": "Frequently asked questions",
+    "description": "Find the most asked questions about our services.",
+    "items": {
+      "project": {
+        "question": "How does a project work?",
+        "answer": "We start with a detailed discussion on Discord to understand your needs. Then, we provide a free quote before starting development."
+      },
+      "delivery": {
+        "question": "What are your delivery times?",
+        "answer": "Project completion times depend on its complexity and our availability. Feel free to join our Discord to request a quote."
+      },
+      "tech": {
+        "question": "What technologies do you use?",
+        "answer": "We primarily use React, Next.js, TypeScript, TailwindCSS, and Adonis to ensure modern, performant, and maintainable applications."
+      }
+    }
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "discord": "Discord",
+    "legal": "Legal notice"
+  },
+  "Banner": {
+    "text": "Need a website? Get a custom quote, fast response, and competitive offers through our Discord server"
+  },
+  "Nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "pricing": "Pricing",
+    "cta": "Request a quote"
+  },
+  "NotFound": {
+    "title": "404",
+    "description": "Page not found",
+    "action": "Return home"
+  },
+  "Pricing": {
+    "title": "Our services",
+    "subtitle": "From ready-to-use themes to custom development",
+    "startingAt": "Starting at",
+    "currency": "EUR",
+    "getStarted": "Get Started",
+    "startDiscussion": "Start Discussion",
+    "customDesign": "Custom web design service",
+    "plans": {
+      "theme": {
+        "name": "Azuriom Theme",
+        "description": "Premium theme for your Azuriom CMS",
+        "features": {
+          "responsive": "Responsive Design",
+          "plugins": "Compatible with Azuriom plugins",
+          "updates": "Theme updates with Azuriom versions",
+          "support": "4 Months Support",
+          "installation": "Installation Service"
+        }
+      },
+      "custom": {
+        "name": "Custom Solution",
+        "description": "Tailored web development for your business",
+        "included": {
+          "title": "What's included:",
+          "subtitle": "Every project is unique and includes:",
+          "items": [
+            "Personalized consultation",
+            "Custom design & development",
+            "Ongoing project updates",
+            "Technical support"
+          ]
+        },
+        "process": {
+          "title": "How it works:",
+          "steps": [
+            "Initial consultation to understand your needs",
+            "Detailed proposal and quote",
+            "Development and regular updates"
+          ]
+        }
+      }
+    }
+  }
+}

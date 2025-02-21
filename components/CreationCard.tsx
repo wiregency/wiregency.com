@@ -2,7 +2,8 @@
 
 import { ArrowRight } from "lucide-react";
 import { Creation } from "@/config/projects";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
 
 interface CreationCardProps {
   creation: Creation;
@@ -11,13 +12,16 @@ interface CreationCardProps {
 
 export default function CreationCard({ creation, isProject = false }: CreationCardProps) {
   const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations();
+  
+  // Extract locale from pathname
+  const locale = pathname.split('/')[1] as 'en' | 'fr';
 
   const handleClick = () => {
     if (isProject) {
-      // Navigate to project page using the title as slug
-      router.push(`/projects/${creation.title.toLowerCase().replace(/\s+/g, '-')}`);
+      router.push(`/${locale}/projects/${creation.slug}`);
     } else if (creation.url) {
-      // Open external URL in new tab
       window.open(creation.url, '_blank');
     }
   };
@@ -50,13 +54,13 @@ export default function CreationCard({ creation, isProject = false }: CreationCa
       <div className={`relative aspect-[4/3] ${getBackgroundColor(creation.backgroundColor)} overflow-hidden`}>
         <img
           src={creation.image}
-          alt={creation.title}
+          alt={creation.title[locale]}
           className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:blur-sm"
         />
         {isProject && (
           <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100 flex items-center justify-center">
             <span className="flex items-center gap-2 text-white font-medium">
-              View project <ArrowRight className="w-4 h-4 rotate-[-45deg]" />
+              {t('Projects.viewProject')} <ArrowRight className="w-4 h-4 rotate-[-45deg]" />
             </span>
           </div>
         )}
@@ -66,11 +70,11 @@ export default function CreationCard({ creation, isProject = false }: CreationCa
       </div>
       <div className="p-4 sm:p-5">
         <span className={`inline-block ${getTagColorClasses(creation.tag.color)} px-2 py-0.5 rounded-full text-xs mb-2`}>
-          {creation.tag.text}
+          {creation.tag.text[locale]}
         </span>
-        <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-1.5">{creation.title}</h3>
+        <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-1.5">{creation.title[locale]}</h3>
         <p className="text-zinc-400 text-xs sm:text-sm">
-          {creation.description}
+          {creation.description[locale]}
         </p>
       </div>
     </div>

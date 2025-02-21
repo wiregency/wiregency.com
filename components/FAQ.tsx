@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { faqItems } from '@/config/faq';
+import { useTranslations } from 'next-intl';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const t = useTranslations();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -22,7 +24,9 @@ export default function FAQ() {
             onClick={() => toggleFAQ(index)}
             className="w-full p-4 sm:p-6 flex items-center justify-between text-left"
           >
-            <h3 className="text-base sm:text-lg font-semibold pr-4">{faq.question}</h3>
+            <h3 className="text-base sm:text-lg font-semibold pr-4">
+              {t(faq.questionKey)}
+            </h3>
             <ChevronDown
               className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 transform transition-transform duration-200 ${
                 openIndex === index ? 'rotate-180' : ''
@@ -36,7 +40,9 @@ export default function FAQ() {
                 : 'max-h-0 opacity-0'
             }`}
           >
-            <p className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-zinc-400">{faq.answer}</p>
+            <p className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-zinc-400">
+              {t(faq.answerKey)}
+            </p>
           </div>
         </div>
       ))}

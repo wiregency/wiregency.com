@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-33.33%);
+    }
+}
+
+.marquee-container {
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(150px, -100px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(200px, 100px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 150px) rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes floatRight {
+  0% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+  25% {
+    transform: translate(-150px, 100px) rotate(270deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-100px, 200px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(-200px, 50px) rotate(90deg) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.orb-left {
+  animation: floatLeft 25s linear infinite;
+}
+
+.orb-right {
+  animation: floatRight 20s linear infinite;
+}

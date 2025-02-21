@@ -1,0 +1,1 @@
+Atlas est un thème premium conçu pour le CMS Azuriom, développé avec TailwindCSS.

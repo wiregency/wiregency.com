@@ -3,8 +3,11 @@
 import { projects } from "@/config/projects";
 import CreationCard from "@/components/CreationCard";
 import { motion } from "framer-motion";
+import { useTranslations } from 'next-intl';
 
 export default function Projects() {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
       <div className="container mx-auto px-4 pt-40 pb-16 md:pt-48 md:pb-24">
@@ -16,7 +19,7 @@ export default function Projects() {
             transition={{ duration: 0.8 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter"
           >
-            Projects
+            {t('Nav.projects')}
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -25,7 +28,7 @@ export default function Projects() {
             className="flex items-center"
           >
             <p className="text-zinc-400 text-lg md:text-xl">
-              Each initiative we create is a reflection of our commitment to excellence, designed to inspire and promote success.
+              {t('Projects.description')}
             </p>
           </motion.div>
         </div>

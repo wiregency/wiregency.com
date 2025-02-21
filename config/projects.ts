@@ -1,41 +1,71 @@
 // Base interface
 export interface Creation {
-  title: string;
-  description: string;
+  title: {
+    en: string;
+    fr: string;
+  };
+  description: {
+    en: string;
+    fr: string;
+  };
   image: string;
   tag: {
-    text: string;
+    text: {
+      en: string;
+      fr: string;
+    };
     color: string;
   };
   backgroundColor: string;
   url?: string;
+  slug?: string;
 }
 
 // Extended interface for projects
 export interface Project extends Creation {
   slug: string;
-  content?: string;
+  content?: {
+    en: string;
+    fr: string;
+  };
 }
 
 export const projects: Project[] = [
     {
-      title: "Atlas",
-      description: "Unique theme designed for Azuriom CMS with TailwindCSS.",
+      title: {
+        en: "Atlas",
+        fr: "Atlas"
+      },
+      description: {
+        en: "Unique theme designed for Azuriom CMS with TailwindCSS.",
+        fr: "Thème unique conçu pour Azuriom CMS avec TailwindCSS."
+      },
       image: "/images/Atlas.webp",
       tag: {
-        text: "Azuriom Theme",
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
         color: "yellow",
       },
       backgroundColor: "yellow",
-      // url: "https://sunerya.fr",
       slug: "atlas",
     },
     {
-      title: "Nomad",
-      description: "Free theme designed for Azuriom CMS with Bootstrap.",
+      title: {
+        en: "Nomad",
+        fr: "Nomad"
+      },
+      description: {
+        en: "Free theme designed for Azuriom CMS with Bootstrap.",
+        fr: "Thème gratuit conçu pour Azuriom CMS avec Bootstrap."
+      },
       image: "/images/Nomad.webp",
       tag: {
-        text: "Azuriom Theme",
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
         color: "yellow",
       },
       backgroundColor: "yellow",
