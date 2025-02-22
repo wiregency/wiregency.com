@@ -15,7 +15,6 @@ export default function CreationCard({ creation, isProject = false }: CreationCa
   const pathname = usePathname();
   const t = useTranslations();
   
-  // Extract locale from pathname
   const locale = pathname.split('/')[1] as 'en' | 'fr';
 
   const handleClick = () => {

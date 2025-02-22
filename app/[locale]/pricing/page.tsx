@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from 'next-intl';
 
-// Add interface for plan types
 interface Plan {
   name: string;
   price: string;

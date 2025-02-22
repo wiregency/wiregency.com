@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from "framer-motion";
-
 export default function BackgroundOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
