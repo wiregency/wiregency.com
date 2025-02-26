@@ -49,6 +49,7 @@ export const projects: Project[] = [
         color: "yellow",
       },
       backgroundColor: "yellow",
+      url: "https://www.youtube.com/watch?v=9Eix6w8GOGk",
       slug: "atlas",
     },
     {
