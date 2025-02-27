@@ -5,7 +5,7 @@ In accordance with Article 6 of Law No. 2004-575 of June 21, 2004, regarding tru
 - **Website Owner**: Khémara Parc
 - **SIRET**: 940 422 306 00016
 - **Contact**: contact@wiregency.com
-- **Host**: Cloudflare
+- **Host**: Vercel
 - **Data Protection Officer**: contact@wiregency.com
 
 ## 2. Intellectual Property and Counterfeiting
