@@ -1,11 +1,11 @@
+'use client';
+
 import NotFoundContent from '@/components/NotFoundContent';
+import { useParams } from 'next/navigation';
 
-type Props = {
-  params: Promise<{ locale: string }>
-};
-
-export default async function NotFound({ params }: Props) {
-  const { locale } = await params;
+export default function NotFound() {
+  const params = useParams();
+  const locale = params.locale as string;
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
