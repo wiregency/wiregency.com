@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'fr' }];
+  return [{ locale: 'fr' }, { locale: 'en' }]; // Changed order to prioritize French
 }
 
 export default async function RootLayout({
