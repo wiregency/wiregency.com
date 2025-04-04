@@ -3,7 +3,7 @@
 In accordance with Article 6 of Law No. 2004-575 of June 21, 2004, regarding trust in the digital economy, users of the wiregency.com website are informed of the identity of the various parties involved in its creation and monitoring:
 
 - **Website Owner**: Khémara Parc
-- **SIRET**: 940 422 306 00016
+- **SIRET**: 940 422 306
 - **Contact**: contact@wiregency.com
 - **Host**: Vercel
 - **Data Protection Officer**: contact@wiregency.com

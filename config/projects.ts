@@ -1,4 +1,3 @@
-// Base interface
 export interface Creation {
   title: {
     en: string;
@@ -21,7 +20,6 @@ export interface Creation {
   slug?: string;
 }
 
-// Extended interface for projects
 export interface Project extends Creation {
   slug: string;
   content?: {
@@ -38,7 +36,7 @@ export const projects: Project[] = [
       },
       description: {
         en: "Unique theme designed for Azuriom CMS with TailwindCSS.",
-        fr: "Thème unique conçu pour Azuriom CMS avec TailwindCSS."
+        fr: "Thème unique conçu pour le CMS Azuriom avec TailwindCSS."
       },
       image: "/images/Atlas.webp",
       tag: {
@@ -51,6 +49,27 @@ export const projects: Project[] = [
       backgroundColor: "yellow",
       url: "https://www.youtube.com/watch?v=9Eix6w8GOGk",
       slug: "atlas",
+    },
+    {
+      title: {
+        en: "Primoria",
+        fr: "Primoria"
+      },
+      description: {
+        en: "Unique theme designed for Primoria on Azuriom CMS with Bootstrap.",
+        fr: "Thème unique conçu pour Primoria sur le CMS Azuriom avec Bootstrap."
+      },
+      image: "/images/Primoria.webp",
+      tag: {
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
+        color: "yellow",
+      },
+      backgroundColor: "yellow",
+      url: "https://www.youtube.com/watch?v=qf0lFV1nyZQ",
+      slug: "primoria",
     },
     {
       title: {

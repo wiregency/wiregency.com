@@ -1,0 +1,1 @@
+This project is an unique theme built on Azuriom CMS for [Primoria](https://primoria.fr) with Bootstrap.
