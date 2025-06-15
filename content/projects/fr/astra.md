@@ -1,0 +1,1 @@
+Astra est un thème moderne et responsive conçu pour le CMS Azuriom.

@@ -31,6 +31,68 @@ export interface Project extends Creation {
 export const projects: Project[] = [
     {
       title: {
+        en: "Astra",
+        fr: "Astra"
+      },
+      description: {
+        en: "Innovative theme designed for Azuriom CMS with modern aesthetics.",
+        fr: "Thème innovant conçu pour le CMS Azuriom pour le serveur Heavencube."
+      },
+      image: "/images/Astra.png",
+      tag: {
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
+        color: "blue",
+      },
+      backgroundColor: "blue",
+      url: "https://heavencube.fr",
+      slug: "astra",
+    },
+    {
+      title: {
+        en: "Lyra",
+        fr: "Lyra"
+      },
+      description: {
+        en: "A new theme designed for Azuriom CMS with unique features.",
+        fr: "Un nouveau thème conçu pour le CMS Azuriom avec des fonctionnalités uniques."
+      },
+      image: "/images/Lyra.png",
+      tag: {
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
+        color: "green",
+      },
+      backgroundColor: "green",
+      url: "https://mineria.fr/",
+      slug: "lyra",
+    },
+    {
+      title: {
+        en: "Zenith",
+        fr: "Zenith"
+      },
+      description: {
+        en: "A cutting-edge theme for Azuriom CMS with advanced customization.",
+        fr: "Un thème de pointe pour le CMS Azuriom avec une boutique moderne."
+      },
+      image: "/images/Zenith.png",
+      tag: {
+        text: {
+          en: "Azuriom Theme",
+          fr: "Thème Azuriom"
+        },
+        color: "purple",
+      },
+      backgroundColor: "purple",
+      slug: "zenith",
+    },
+    {
+      title: {
         en: "Atlas",
         fr: "Atlas"
       },
